@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ура 💞</title>
+
+<style>
+:root{
+  --bg1:#fff0f6;
+  --bg2:#ffe4ef;
+  --card:#ffffffcc;
+  --text:#2b2b2b;
+  --accent:#ff2d55;
+  --shadow:0 16px 40px rgba(0,0,0,.12);
+}
+
+*{box-sizing:border-box}
+
+body{
+margin:0;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:system-ui;
+background:
+radial-gradient(900px 500px at 20% 10%,var(--bg2),transparent 60%),
+radial-gradient(900px 500px at 80% 90%,#ffd6e7,transparent 60%),
+linear-gradient(135deg,var(--bg1),#fff);
+padding:20px;
+}
+
+.card{
+width:min(860px,100%);
+background:var(--card);
+backdrop-filter:blur(8px);
+border-radius:24px;
+box-shadow:var(--shadow);
+padding:30px;
+text-align:center;
+}
+
+.title{
+font-size:38px;
+display:flex;
+justify-content:center;
+gap:10px;
+align-items:center;
+}
+
+.bounce{
+animation:bounce 1.6s infinite ease-in-out;
+display:inline-block;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-5px)}
+}
+
+.hero{
+width:min(520px,100%);
+border-radius:18px;
+box-shadow:0 10px 26px rgba(0,0,0,.1);
+margin:20px auto;
+display:block;
+}
+
+/* ===== секретная кнопка ===== */
+
+.secretWrap{
+margin-top:15px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:8px;
+}
+
+.secretBtn{
+text-decoration:none;
+background:linear-gradient(135deg,var(--accent),#ff5c7a);
+color:white;
+padding:14px 22px;
+border-radius:999px;
+box-shadow:0 14px 26px rgba(255,45,85,.3);
+display:flex;
+align-items:center;
+gap:10px;
+filter:blur(6px);
+opacity:.45;
+transition:.25s;
+}
+
+.secretBtn span{
+opacity:0;
+transition:.25s;
+}
+
+.secretBtn:hover{
+filter:blur(0);
+opacity:1;
+transform:translateY(-2px);
+}
+
+.secretBtn:hover span{
+opacity:1;
+}
+
+.secretNote{
+font-size:13px;
+opacity:.7;
+}
+
+/* маленькое дыхание сердцу */
+.heart{
+animation:pulse 1.3s infinite;
+}
+
+@keyframes pulse{
+0%,100%{transform:scale(1)}
+50%{transform:scale(1.15)}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1 class="title">
+Ура!
+<span class="bounce">💞</span>
+</h1>
+
+<p>Я очень рад 💌</p>
+<p>Спасибо, что согласилась!</p>
+<p>С тобой этот день становится особенным</p>
+
+<img src="assets/celebrate.gif" class="hero">
+
+<div class="secretWrap">
+
+<a href="letter.html" class="secretBtn">
+<span class="heart">💗</span>
+<span>Хочешь прочесть текст о моих чувствах к тебе?</span>
+</a>
+
+<div class="secretNote">Тут скрыто самое интересное)</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
